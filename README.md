@@ -7,7 +7,7 @@ https://dwbi.org/etl/bigdata/183-setup-hadoop-cluster
 with some additional tips and pitfalls you may encounter
 
 
-##Create a droplet on DigitalOcean
+##Create a droplet on DigitalOcean that will be used for the Hadoop namemode
 * Choose Ubuntu 16.04.1 x64
 * Choose a 2GB/40GB size(you can choose smaller, but you will likely run into out of heap memory issues
 * Select a datacenter. Make note of the region you choose. You will need to select the same region for inter cluster communication.
@@ -40,7 +40,7 @@ In the hosts file delete all other entries, and add the following line:
 192.168.1.1 NameNode
 ```
 
-where 192.168.1.1 is the private IP of your droplet.
+Replace 192.168.1.1 with the private IP of your droplet you copied earlier.
 
 ##Tips
 
