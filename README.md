@@ -23,12 +23,24 @@ vim /etc/hosts
 
 Enter the private IP address of the droplet. We need to add the private IP to facilitate droplet to droplet communication within DigitalOcean.
 
-To find your private IP address run
+To find your private IP address run the following on the command line
 ```
 root@NameNode: ~# ifconfig
 ```
 
-Your private IP will appear under the "eth1" section of the output.
+Your private IP will appear under the "eth1" section of the output. Copy the private IP and add it to your hosts file.
+
+```
+root@NameNode: ~# vim /etc/hosts
+```
+
+In the hosts file delete all other entries, and add the following line:
+
+```
+192.168.1.1 NameNode
+```
+
+where 192.168.1.1 is the private IP of your droplet.
 
 ##Tips
 
