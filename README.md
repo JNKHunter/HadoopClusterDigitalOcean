@@ -1,5 +1,11 @@
-# HadoopClusterDigitalOcean
+# How to set up a Hadoop cluster on DigitalOcean
 Instructions and tips for setting up a hadoop cluster on digital ocean
+
+This is essentially a boiling down of instructions found here:
+https://dwbi.org/etl/bigdata/183-setup-hadoop-cluster
+
+with some additional tips and pitfalls you may encounter
+
 
 ##Create a droplet on DigitalOcean
 * Choose Ubuntu 16.04.1 x64
