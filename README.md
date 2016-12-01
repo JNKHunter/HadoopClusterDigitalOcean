@@ -16,9 +16,19 @@ with some additional tips and pitfalls you may encounter
 * Enter "NameNode" as the droplet name
 * Click "create"
 
-###
+###Set up hosts file
+```
+vim /etc/hosts
+```
 
+Enter the private IP address of the droplet. We need to add the private IP to facilitate droplet to droplet communication within DigitalOcean.
 
+To find your private IP address run
+```
+root@NameNode: ~# ifconfig
+```
+
+Your private IP will appear under the "eth1" section of the output.
 
 ##Tips
 
