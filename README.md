@@ -19,7 +19,18 @@ with some additional tips and pitfalls you may encounter
 
 ##Tips
 
-###DataNotes not starting up or stopping on their own
+###NameNode not starting up or stopping on it's own or failing silently
+It could be your NameNode has run out of heap space. You can allocate more memory by adding the following to mapred-site.xml
+```
+<property>
+    <name>mapred.child.java.opts</name>
+    <value>Xmx1024m</value>
+</property>
+```
+
+You may need to allocate additional memory depending on your needs.
+
+###DataNotes not starting up or stopping on their own or failinlg silently
 The problem could be that the namenode was formatted after the cluster was set up and the datanodes were not, so the slaves are still referring to the old namenode.
 
 We have to delete and recreate the folder /home/hadoop/dfs/data on the local filesystem for the datanode.
