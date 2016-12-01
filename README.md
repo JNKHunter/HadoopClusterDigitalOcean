@@ -16,6 +16,9 @@ with some additional tips and pitfalls you may encounter
 * Enter "NameNode" as the droplet name
 * Click "create"
 
+###
+
+
 
 ##Tips
 
@@ -30,7 +33,7 @@ It could be your NameNode has run out of heap space. You can allocate more memor
 
 You may need to allocate additional memory depending on your needs.
 
-###DataNotes not starting up or stopping on their own or failinlg silently
+###DataNodes not starting up or stopping on their own or failinlg silently
 The problem could be that the namenode was formatted after the cluster was set up and the datanodes were not, so the slaves are still referring to the old namenode.
 
 We have to delete and recreate the folder /home/hadoop/dfs/data on the local filesystem for the datanode.
