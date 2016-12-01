@@ -12,6 +12,7 @@ with some additional tips and pitfalls you may encounter
 * Choose a 2GB/40GB size(you can choose smaller, but you will likely run into out of heap memory issues
 * Select a datacenter. Make note of the region you choose. You will need to select the same region for inter cluster communication.
 * Select "Private Networking" in additional options
+* Select your ssh key for password-less login
 * Enter "NameNode" as the droplet name
 * Click "create"
 
